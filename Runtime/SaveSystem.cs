@@ -41,6 +41,11 @@ namespace SpellBoundAR.SaveSystem
             return !File.Exists(fullPath + "_copy") ? null : File.ReadAllText(fullPath + "_copy");
         }
 
+        public static bool FileExists(string directory, string file) 
+        {
+            return File.Exists(Path.Combine(Root, directory, file));
+        }
+
         public static void SaveTexture(string directory, string file, Texture2D texture)
         {
             string path = Path.Combine(Root, directory, file);
