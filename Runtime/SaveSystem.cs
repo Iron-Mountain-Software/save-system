@@ -11,6 +11,9 @@ namespace SpellBoundAR.SaveSystem
     
         public static void SaveFile(string directory, string file, string data)
         {
+            if (string.IsNullOrEmpty(file)) return;
+            directory ??= string.Empty;
+            
             string path = Path.Combine(Root, directory, file);
             string directoryPath = Path.GetDirectoryName(path);
             
@@ -34,6 +37,8 @@ namespace SpellBoundAR.SaveSystem
 
         public static string LoadFile(string directory, string file) 
         {
+            if (string.IsNullOrEmpty(file)) return null;
+            directory ??= string.Empty;
             string fullPath = Path.Combine(Root, directory, file);
             string directoryPath = Path.GetDirectoryName(fullPath);
             if (!Directory.Exists(directoryPath)) return null;
@@ -43,11 +48,16 @@ namespace SpellBoundAR.SaveSystem
 
         public static bool FileExists(string directory, string file) 
         {
+            if (string.IsNullOrEmpty(file)) return false;
+            directory ??= string.Empty;
             return File.Exists(Path.Combine(Root, directory, file));
         }
 
         public static void SaveTexture(string directory, string file, Texture2D texture)
         {
+            if (string.IsNullOrEmpty(file)) return;
+            directory ??= string.Empty;
+            
             string path = Path.Combine(Root, directory, file);
             string directoryPath = Path.GetDirectoryName(path);
         
@@ -72,6 +82,8 @@ namespace SpellBoundAR.SaveSystem
         
         public static bool RenameTexture(string directory, string oldFilename, string newFilename)
         {
+            if (string.IsNullOrEmpty(oldFilename) || string.IsNullOrEmpty(newFilename)) return false;
+            directory ??= string.Empty;
             string pathToDirectory = Path.Combine(Root, directory);
             if (!Directory.Exists(pathToDirectory)) Directory.CreateDirectory(pathToDirectory);
             string pathToOldFile = Path.Combine(pathToDirectory, oldFilename);
@@ -86,6 +98,8 @@ namespace SpellBoundAR.SaveSystem
         
         public static Texture2D LoadTexture(string directory, string file) 
         {
+            if (string.IsNullOrEmpty(file)) return null;
+            directory ??= string.Empty;
             string fullPath = Path.Combine(Root, directory, file);
             string directoryPath = Path.GetDirectoryName(fullPath);
             if (!Directory.Exists(directoryPath)) return null;
@@ -106,6 +120,8 @@ namespace SpellBoundAR.SaveSystem
     
         public static void DeleteFile(string directory, string file) 
         {
+            if (string.IsNullOrEmpty(file)) return;
+            directory ??= string.Empty;
             string fullPath = Path.Combine(Root, directory, file);
             string directoryPath = Path.GetDirectoryName(fullPath);
             if (!Directory.Exists(directoryPath)) return;
@@ -114,6 +130,7 @@ namespace SpellBoundAR.SaveSystem
 
         public static DirectoryInfo[] GetDirectoryInfo(string directory)
         {
+            directory ??= string.Empty;
             string pathToDirectory = Path.Combine(Root, directory);
             if (!Directory.Exists(pathToDirectory)) Directory.CreateDirectory(pathToDirectory);
             return new DirectoryInfo(pathToDirectory).GetDirectories();
@@ -121,6 +138,7 @@ namespace SpellBoundAR.SaveSystem
     
         public static string[] GetFilesIn(string directory, params FileType[] fileTypeFilters)
         {
+            directory ??= string.Empty;
             string pathToDirectory = Path.Combine(Root, directory);
             if (!Directory.Exists(pathToDirectory)) Directory.CreateDirectory(pathToDirectory);
             return Directory.GetFiles(pathToDirectory);
@@ -128,6 +146,7 @@ namespace SpellBoundAR.SaveSystem
         
         public static string[] GetFilesOfTypeIn(string directory, params FileType[] fileTypeFilters)
         {
+            directory ??= string.Empty;
             string pathToDirectory = Path.Combine(Root, directory);
             if (!Directory.Exists(pathToDirectory)) Directory.CreateDirectory(pathToDirectory);
             string[] files = Directory.GetFiles(pathToDirectory);
@@ -137,6 +156,7 @@ namespace SpellBoundAR.SaveSystem
 
         public static bool DeleteDirectory(string directory)
         {
+            if (string.IsNullOrEmpty(directory)) return false;
             string pathToDirectory = Path.Combine(Root, directory);
             if (!Directory.Exists(pathToDirectory)) return false;
             Directory.Delete(pathToDirectory, true);
