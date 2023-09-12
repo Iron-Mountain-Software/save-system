@@ -1,8 +1,12 @@
 {
-    "name": "com.spellboundar.save-system",
-    "rootNamespace": "SpellBoundAR.SaveSystem",
-    "references": [],
-    "includePlatforms": [],
+    "name": "com.iron-mountain.save-system.Editor",
+    "rootNamespace": "IronMountain.SaveSystem",
+    "references": [
+        "GUID:ea97e248456a044e9b19459266db175c"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
     "excludePlatforms": [],
     "allowUnsafeCode": false,
     "overrideReferences": false,

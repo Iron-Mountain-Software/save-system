@@ -1,7 +1,7 @@
 using UnityEditor;
 using UnityEngine;
 
-namespace SpellBoundAR.SaveSystem.Editor
+namespace IronMountain.SaveSystem.Editor
 {
     public static class MenuItems
     {

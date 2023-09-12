@@ -1,8 +1,8 @@
 {
-  "name": "com.spellboundar.save-system",
-  "version": "1.0.2",
+  "name": "com.iron-mountain.save-system",
+  "version": "1.0.0",
   "displayName": "Save System",
-  "description": "A library for reading and writing files.",
+  "description": "A library for reading and writing files and data-types.",
   "unity": "2019.1",
   "keywords": [
     "tools",
@@ -12,11 +12,11 @@
   "type": "tool",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/SpellBoundAR-Packages/save-system.git"
+    "url": "git+https://github.com/Iron-Mountain-Software/save-system.git"
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/SpellBoundAR-Packages/save-system/issues"
+    "url": "https://github.com/Iron-Mountain-Software/save-system/issues"
   },
-  "homepage": "https://github.com/SpellBoundAR-Packages/save-system#readme"
+  "homepage": "https://github.com/Iron-Mountain-Software/save-system#readme"
 }
