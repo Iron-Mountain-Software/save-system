@@ -1,6 +1,6 @@
 {
   "name": "com.iron-mountain.save-system",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "displayName": "Save System",
   "description": "A library for reading and writing files and data-types.",
   "unity": "2019.1",
