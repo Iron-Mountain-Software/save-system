@@ -13,7 +13,7 @@ namespace IronMountain.SaveSystem
         [SerializeField] private string directory;
         [SerializeField] private string file;
         [SerializeField] private List<string> data;
-            
+        
         public List<string> Data
         {
             get
@@ -75,7 +75,7 @@ namespace IronMountain.SaveSystem
         {
             this.directory = directory;
             this.file = file;
-            data = defaultData;
+            data = new List<string>(defaultData);
             OnValueChanged = onValueChanged;
             Load();
         }
