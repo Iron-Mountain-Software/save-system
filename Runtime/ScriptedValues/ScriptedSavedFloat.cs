@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace IronMountain.SaveSystem
 {
-    [CreateAssetMenu(menuName = "Save System/Scripted Values/Float")]
+    [CreateAssetMenu(menuName = "Scriptable Objects/Save System/Scripted Values/Float")]
     public class ScriptedSavedFloat : ScriptedSavedValue<float>
     {
         [SerializeField] private float defaultValue;

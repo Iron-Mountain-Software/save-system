@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace IronMountain.SaveSystem
 {
-    [CreateAssetMenu(menuName = "Save System/Scripted Values/Bool")]
+    [CreateAssetMenu(menuName = "Scriptable Objects/Save System/Scripted Values/Bool")]
     public class ScriptedSavedBool : ScriptedSavedValue<bool>
     {
         [SerializeField] private bool defaultValue;
