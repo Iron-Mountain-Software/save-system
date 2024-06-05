@@ -1,22 +1,40 @@
 {
   "name": "com.iron-mountain.save-system",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "displayName": "Save System",
-  "description": "A library for reading and writing files and data-types.",
-  "unity": "2019.1",
-  "keywords": [
-    "tools",
-    "saving"
-  ],
   "author": "Chris Monteferrante <chris@spellboundar.com>",
+  "unity": "2019.1",
   "type": "tool",
+  "license": "MIT",
+  "homepage": "https://github.com/Iron-Mountain-Software/save-system#readme",
+  "bugs": {
+    "type": "git",
+    "url": "https://github.com/Iron-Mountain-Software/save-system/issues"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Iron-Mountain-Software/save-system.git"
   },
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/Iron-Mountain-Software/save-system/issues"
-  },
-  "homepage": "https://github.com/Iron-Mountain-Software/save-system#readme"
+  "description": "A library for reading and writing files and data-types.\n\nSOME CODING REQUIRED",
+  "useCases": [],
+  "instructions": [],
+  "keywords": [
+    "tools",
+    "saving"
+  ],
+  "sources": [
+    {
+      "type": "npm",
+      "url": "https://www.npmjs.com/package/com.iron-mountain.save-system"
+    },
+    {
+      "type": "git",
+      "url": "https://github.com/Iron-Mountain-Software/save-system"
+    },
+    {
+      "type": "itch.io",
+      "url": "https://iron-mountain.itch.io/save-system"
+    }
+  ],
+  "dependencies": {}
 }
